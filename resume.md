@@ -13,8 +13,8 @@ summary: |
   Software Engineering undergraduate at Monash University Malaysia, graduating
   May 2028. Works across the stack, from Rust and Tauri on the desktop to React
   and Postgres on the web. Has led university teams as a scrum master
-  and a software architect, and managed merge request
-  reviews, repository hygiene, and unblocking teammates. Runs Linux daily,
+  and a software architect. Managed merge request
+  reviews, repository hygiene, and unblocking teammates. Advanced linux knowledge,
   self-hosts a Proxmox server, and builds small tools to reduce repetitive work.
   Seeking a software engineering internship.
 ---
@@ -34,15 +34,17 @@ summary: |
 
 ## Experience
 
-### Worked in a university group (of 6 people) using agile and scrum group management techniques (over 3 months)
+### Worked in a university group (of 6 people) (over 3 months)
 
+- Used agile and scrum group management techniques
 - Built a Learning Management System website
 - **Software Stack:** Vite+React with a traditional PostgreSQL+Express backend
 - Took on the scrum master role and made sure everyone was on task and helped them if needed
 - Took on the fullstack developer role
 
-### Worked in a larger scale university group (of 10 people) using SAFe group management techniques (over 9 months)
+### Worked in a larger scale university group (of 10 people) (over 9 months)
 
+- Used SAFe group management techniques
 - Built a peer tutoring marketplace
 - **Software Stack:** Vite+React+Shadcn with a Convex unified backend-as-a-service
 - Took on the Software Architecture role that made major decisions on the tech stack

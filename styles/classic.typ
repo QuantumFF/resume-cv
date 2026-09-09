@@ -35,7 +35,7 @@
 // ---------- Section headings ----------
 
 #show heading.where(level: 2): it => block(above: 1.5em, below: 0.6em, sticky: true)[
-  #set text(size: 11.8pt, weight: "bold")
+  #set text(size: 13pt, weight: "bold")
   #smallcaps(it.body)
   #v(-0.42em)
   #line(length: 100%, stroke: 0.7pt + black)
