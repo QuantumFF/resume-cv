@@ -13,7 +13,7 @@ cd "$(dirname "$0")"
 SRC=resume.md
 OUT=out
 TMP=build
-FINAL_STYLE=modern          # which style --final ships
+FINAL_STYLE=classic         # which style --final ships
 FINAL_NAME="Jonathan-Chan-Resume.pdf"
 
 # Section routing for the two-column style.
