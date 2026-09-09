@@ -47,10 +47,54 @@
   #line(length: 100%, stroke: 0.7pt + accent.lighten(45%))
 ]
 
-#show heading.where(level: 3): it => block(above: 0.6em, below: 0.25em)[
-  #set text(size: 9.6pt, weight: "bold")
-  #it.body
-]
+// ---------- Entry headings, with the trailing parenthetical set flush right ----------
+
+// Typst splits markup text into text/space element sequences, so rebuild the
+// plain string. Returns none if the heading holds anything else (e.g. a link).
+#let flatten-text(c) = {
+  if c.func() == text { return c.text }
+  if c == [ ] { return " " }
+  if c.has("children") {
+    let out = ""
+    for ch in c.children {
+      let s = flatten-text(ch)
+      if s == none { return none }
+      out += s
+    }
+    return out
+  }
+  none
+}
+
+// "Some Title (June 2024 - Present)" -> ("Some Title", "June 2024 - Present")
+// Anything without a trailing parenthetical comes back as (body, none).
+#let split-trailing-paren(body) = {
+  let s = flatten-text(body)
+  if s == none or not s.ends-with(")") { return (body, none) }
+  let parts = s.split("(")
+  if parts.len() < 2 { return (body, none) }
+  let tail = parts.last()
+  if tail.slice(0, tail.len() - 1).contains(")") { return (body, none) }
+  (s.slice(0, s.len() - tail.len() - 1).trim(), tail.slice(0, tail.len() - 1))
+}
+
+#show heading.where(level: 3): it => {
+  let (title, aside) = split-trailing-paren(it.body)
+  block(above: 0.7em, below: 0.3em, sticky: true)[
+    #set text(size: 9.5pt, weight: "bold")
+    #if aside == none {
+      title
+    } else {
+      grid(
+        columns: (1fr, auto),
+        column-gutter: 1em,
+        align: (left + top, right + top),
+        title,
+        text(weight: "regular", size: 8.8pt, fill: luma(40%))[#aside],
+      )
+    }
+  ]
+}
 
 // ---------- Header ----------
 
