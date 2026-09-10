@@ -10,13 +10,12 @@ github-url: https://www.github.com/quantumff
 linkedin: LinkedIn
 linkedin-url: https://www.linkedin.com/in/jonathan-chan-zhi-thern-4b505a272/
 summary: |
-  Software Engineering undergraduate at Monash University Malaysia, graduating
+  Third Year Software Engineering undergraduate at Monash University Malaysia, graduating
   May 2028. Works across the stack, from Rust and Tauri on the desktop to React
   and Postgres on the web. Has led university teams as a scrum master
-  and a software architect. Managed merge request
-  reviews, repository hygiene, and unblocking teammates. Advanced linux knowledge,
+  and a software architect, managed merge request, code reviews, repository hygiene, and unblocking teammates. Advanced linux knowledge,
   self-hosts a Proxmox server, and builds small tools to reduce repetitive work.
-  Seeking a software engineering internship.
+  Seeking a software engineering internship eager to build software and improve development efficiency.
 ---
 
 ## Education
@@ -113,6 +112,6 @@ summary: |
 - Immich for photo and video storage
 - Navidrome for music streaming
 
-## Spoken Languages
+## Languages Proficiency 
 
 Native English. Conversational Malay and Chinese.
